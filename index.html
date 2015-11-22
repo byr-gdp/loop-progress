@@ -3,51 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <title>loop progress</title>
-  <style>
-  @keyframes toggle {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  .loop-progress {
-    position: relative;
-    top:      0;
-    left:     0;
-    width:    150px;
-    height:   150px;
-  }
-
-  .loop-progress div {
-    position:      absolute;
-    top:           0;
-    left:          0;
-    height:        150px;
-    width:         150px;
-    border:        20px solid transparent;
-    /*border:      15px solid #333;*/
-    border-radius: 50%;
-    box-sizing:    border-box;
-  }
-
-  .loop-progress .loop-progress-left,
-  .loop-progress .loop-progress-right,
-  .loop-progress .loop-progress-cover {
-    clip: rect(0, 75px, 150px, 0);
-  }
-
-  .loop-progress-right {
-    opacity:   0;
-    transform: rotate(180deg);
-  }
-  </style>
+  <link rel="stylesheet" href="./style/loop-progress.css">
 </head>
 <body>
-  <div class="loop-progress" data-percent="99" data-color="#333333,#999999"></div>
-  <div class="loop-progress" data-percent="40" data-duration="4"></div>
+  <!--<div class="loop-progress" data-percent="99" data-color="#333333,#999999"></div>-->
+  <div class="loop-progress" data-percent="40" data-duration="1" data-bg="#34495E" data-progress="#F1C40F" data-timing="ease-in-out" data-border-width="10"></div>  
+   
+  <div class="loop-progress" data-percent="40" data-duration="1" data-bg="#34495E" data-progress="#F1C40F" data-timing="linear"></div>
+  
+  
+  <div class="loop-progress" data-percent="40" data-duration="1" data-bg="#34495E" data-progress="#F1C40F" data-timing="ease-out"></div>
+  <div class="loop-progress" data-percent="40" data-duration="1" data-bg="#34495E" data-progress="#F1C40F" data-timing="ease-in"></div>
+  
+  
   <script src="js/jquery.min.js"></script>
   <script src="js/loop-progress.js"></script>
   <script>
